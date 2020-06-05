@@ -2,38 +2,35 @@
 
 /**
  * Copyright (c) 2013 Milq Media (https://github.com/milqmedia
- *
  * For the full copyright and license information, please view
  * the file LICENSE.txt that was distributed with this source code.
- * 
- * @author Milq Media <johan@milq.nl>
  *
- * 
+ * @author Milq Media <johan@milq.nl>
  */
-return array(
-    'mq-redis-session' => array (
-        'set_storage_on_boot' => true,
-        'redis' => array(
-            'adapter' => array (
-                'name' => 'redis',
-                'options' => array (
-                    'server' => [
-                        'host' => '127.0.0.1',
-                        'port' => 6379,
-                    ],
-                    // optional db identifier
-                    //'database' => 0,
-                ),                
-            ),
-        ),
-        'session' => array(
-            'cache_expire' => 86400,
-            'cookie_lifetime' => 31536000,
-            'gc_maxlifetime' => 31536000,
-            'cookie_path' => '/',
-            'cookie_secure' => false,
-            'remember_me_seconds' => 31536000,
-            'use_cookies' => true,
-        ),
-    )
-);
+return [
+	'mq-redis-session' => [
+		'set_storage_on_boot' => true,
+		'redis'               => [
+			'adapter' => [
+				'name'    => 'redis',
+				'options' => [
+					'server' => [
+						'host' => '127.0.0.1',
+						'port' => 6379,
+					],
+					// optional db identifier
+					//'database' => 0,
+				],
+			],
+		],
+		'session'             => [
+			'cache_expire'        => 86400,
+			'cookie_lifetime'     => 31536000,
+			'gc_maxlifetime'      => 31536000,
+			'cookie_path'         => '/',
+			'cookie_secure'       => false,
+			'remember_me_seconds' => 31536000,
+			'use_cookies'         => true,
+		],
+	],
+];

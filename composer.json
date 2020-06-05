@@ -1,28 +1,33 @@
 {
-    "name": "milqmedia/mq-redis-session",
-    "description": "Zend Framework 2 redis session storage",
-    "type": "library",
-    "keywords": ["redis","session","storage","zf2"],
-    "homepage": "https://github.com/milqmedia/MQRedisSessionStorage",
-    "license": "New BSD License",
-    "authors": [
-        {
-            "name": "Johan Kuijt",
-            "email": "johan@milq.nl",
-            "homepage": "http://www.milq.nl",
-            "role": "Hasselhoffer"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.3",
-        "zendframework/zendframework": ">2.0"
-    },
-    "autoload": {
-        "psr-0": {
-            "MQRedisSessionStorage": "src/"
-        },
-        "classmap": [
-            "Module.php"
-        ]
-    }
+	"name": "focus-camera/mq-redis-session",
+	"description": "Zend Framework 2 redis session storage",
+	"type": "library",
+	"keywords": [
+		"redis",
+		"session",
+		"storage",
+		"zf2"
+	],
+	"homepage": "https://github.com/focus-camera/mq-redis-session-storage",
+	"license": "New BSD License",
+	"authors": [
+		{
+			"name": "Johan Kuijt",
+			"email": "johan@milq.nl",
+			"homepage": "http://www.milq.nl",
+			"role": "Hasselhoffer"
+		}
+	],
+	"require": {
+		"php": "^7.3.7",
+		"zendframework/zendframework": "2.4.13"
+	},
+	"autoload": {
+		"psr-4": {
+			"MQRedisSessionStorage": "src/"
+		},
+		"classmap": [
+			"Module.php"
+		]
+	}
 }

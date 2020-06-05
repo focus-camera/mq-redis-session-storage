@@ -1,3 +1,7 @@
+# focus-camera/mq-redis-session-storage
+
+This repository has been forked to maintain compatibility with the ZF2 release and Composer 2. The previous README is below.
+
 MQRedisSessionStorage
 ================
 
