@@ -1,5 +1,5 @@
 {
-	"name": "focus-camera/mq-redis-session",
+	"name": "focus-camera/mq-redis-session-storage",
 	"description": "Zend Framework 2 redis session storage",
 	"type": "library",
 	"keywords": [

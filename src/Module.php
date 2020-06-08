@@ -26,7 +26,7 @@ class Module {
 
 			$storage = $e->getApplication()
 				->getServiceManager()
-				->get('MQRedisSessionStorage\Storage\RedisStorage');
+				->get('FocusCamera\\MQRedisSessionStorage\\Storage\\RedisStorage');
 
 			try {
 				$storage->setSessionStorage();

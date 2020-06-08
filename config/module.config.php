@@ -9,7 +9,7 @@
 return [
 	'service_manager' => [
 		'factories' => [
-			'MQRedisSessionStorage\Storage\RedisStorage' => 'MQRedisSessionStorage\Factory\RedisStorageFactory',
+			'FocusCamera\\MQRedisSessionStorage\\Storage\\RedisStorage' => 'FocusCamera\\MQRedisSessionStorage\\Factory\\RedisStorageFactory',
 		],
 	],
 ];
