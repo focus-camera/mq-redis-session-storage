@@ -8,7 +8,7 @@
  * @author Milq Media <johan@milq.nl>
  */
 
-namespace MQRedisSessionStorage\Factory;
+namespace FocusCamera\MQRedisSessionStorage\Factory;
 
 use MQRedisSessionStorage\Storage\RedisStorage;
 use Zend\ServiceManager\FactoryInterface;

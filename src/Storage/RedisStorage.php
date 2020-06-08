@@ -8,7 +8,7 @@
  * @author Milq Media <johan@milq.nl>
  */
 
-namespace MQRedisSessionStorage\Storage;
+namespace FocusCamera\MQRedisSessionStorage\Storage;
 
 use Zend\Cache\StorageFactory;
 use Zend\Session\Config\SessionConfig;

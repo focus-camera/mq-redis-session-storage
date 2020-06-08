@@ -7,7 +7,7 @@
  * the file LICENSE.txt that was distributed with this source code.
  */
 
-namespace MQRedisSessionStorage;
+namespace FocusCamera\MQRedisSessionStorage;
 
 /**
  * Class Module
