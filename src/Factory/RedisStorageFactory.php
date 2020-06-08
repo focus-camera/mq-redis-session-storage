@@ -21,20 +21,14 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class RedisStorageFactory implements FactoryInterface {
 	/**
-	 * @param \Zend\ServiceManager\ServiceManager $container
+	 * @param ServiceLocatorInterface $container
 	 * @param string $requestedName
-	 * @param array|NULL $options
+	 * @param array|null $options
 	 *
 	 * @return RedisStorage
 	 */
-	public function __invoke($container, $requestedName, array $options = null) {
-		$conf = $container->get('Config');
-		$config = null;
-		if(isset($conf['mq-redis-session'])) {
-			$config = $conf['mq-redis-session'];
-		}
-
-		return new RedisStorage($config);
+	public function __invoke(ServiceLocatorInterface $container, $requestedName, array $options = null) {
+		return new RedisStorage($container->get('Config')['mq-redis-session'] ?? null);
 	}
 
 	/**

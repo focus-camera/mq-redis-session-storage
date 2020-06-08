@@ -10,6 +10,7 @@
 
 namespace FocusCamera\MQRedisSessionStorage\Storage;
 
+use Zend\Cache\Exception\InvalidArgumentException;
 use Zend\Cache\StorageFactory;
 use Zend\Session\Config\SessionConfig;
 use Zend\Session\Container;
@@ -71,9 +72,9 @@ class RedisStorage {
 
 		$saveHandler = new Cache($cache);
 
-		$manager = new SessionManager();
+		$manager = new SessionManager;
 
-		$sessionConfig = new \Zend\Session\Config\SessionConfig();
+		$sessionConfig = new SessionConfig;
 		$sessionConfig->setOptions($this->_config['session']);
 
 		$manager->setConfig($sessionConfig);
@@ -81,14 +82,14 @@ class RedisStorage {
 
 		// Validation to prevent session hijacking
 		$manager->getValidatorChain()
-			->attach('session.validate', [new HttpUserAgent(), 'isValid']);
+			->attach('session.validate', [new HttpUserAgent, 'isValid']);
 		$manager->getValidatorChain()
-			->attach('session.validate', [new RemoteAddr(), 'isValid']);
+			->attach('session.validate', [new RemoteAddr, 'isValid']);
 
 		try {
 			$manager->start();
-		} catch(Zend\Cache\Exception\InvalidArgumentException $e) {
-			trigger_error('MQ-RedisSession Error: ' . $e->getMessage(), E_USER_ERROR);
+		} catch(InvalidArgumentException $e) {
+			trigger_error('MQRedisSessionStorage Error: ' . $e->getMessage(), E_USER_ERROR);
 		}
 
 		Container::setDefaultManager($manager);
