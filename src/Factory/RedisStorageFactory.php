@@ -10,7 +10,7 @@
 
 namespace FocusCamera\MQRedisSessionStorage\Factory;
 
-use MQRedisSessionStorage\Storage\RedisStorage;
+use FocusCamera\MQRedisSessionStorage\Storage\RedisStorage;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
